@@ -1,8 +1,18 @@
 var counter = 0;
 
+var audioFiles = ["audio/on.mp3", "audio/off.mp3", "audio/21.mp3", "audio/69.mp3", "audio/1000.mp3", "audio/420.mp3"];
+
+for (var i = 0; i < audioFiles.length; i++) {
+    var audio = new Audio(audioFiles[i]);
+    audio.load();
+}
+
+var img = new Image();
+img.src = "images/on.svg";
+img.load();
+
 function pictureChange() {
-    var img = new Image();
-    img.src = "images/on.svg";
+
 
     var bulb = document.getElementById("lightbulb");
     var text = document.getElementById("text");
@@ -10,18 +20,14 @@ function pictureChange() {
 
     if (bulb.src.endsWith("images/on.svg")) {
         new Audio("audio/on.mp3").play();
-        img.onload = function() {
-            bulb.src = "images/off.svg";
-            text.innerHTML = "<p>turn on the lightbulb to make it happy</p>";
-        };
+        bulb.src = "images/off.svg";
+        text.innerHTML = "<p>turn on the lightbulb to make it happy</p>";
     } 
 
     else {
         new Audio("audio/off.mp3").play();
-        img.onload = function() {
-            bulb.src = "images/on.svg";
-            text.innerHTML = "<p>the lightbulb is happy! you can turn it off if you want to</p>";
-        }
+        bulb.src = "images/on.svg";
+        text.innerHTML = "<p>the lightbulb is happy! you can turn it off if you want to</p>";
         counter++;
         counterDisplay.innerHTML = counter;
         if (counter === 21) {

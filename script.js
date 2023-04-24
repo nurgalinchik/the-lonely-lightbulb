@@ -27,7 +27,7 @@ function pictureChange() {
     else {
         new Audio("audio/off.mp3").play();
         bulb.src = "images/on.svg";
-        text.innerHTML = "<p>the lightbulb is happy! you can turn it off if you want to</p>";
+        text.innerHTML = "<p>the lightbulb is happy!</p>";
         counter++;
         counterDisplay.innerHTML = counter;
         if (counter === 21) {

@@ -1,6 +1,6 @@
 var counter = 0;
 
-var audioFiles = ["audio/on.mp3", "audio/off.mp3", "audio/21.mp3", "audio/69.mp3", "audio/1000.mp3", "audio/420.mp3"];
+var audioFiles = ["audio/on.mp3", "audio/off.mp3", "audio/21.mp3", "audio/69.mp3", "audio/1000.mp3", "audio/420.mp3", "audio/107.mp3"];
 
 for (var i = 0; i < audioFiles.length; i++) {
     var audio = new Audio(audioFiles[i]);

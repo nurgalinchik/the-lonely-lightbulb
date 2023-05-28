@@ -1,6 +1,6 @@
 var counter = 0;
 
-var audioFiles = ["audio/on.mp3", "audio/off.mp3", "audio/1.mp3", "audio/21.mp3", "audio/69.mp3", "audio/107.mp3", "audio/420.mp3", "audio/478.mp3", "audio/1000.mp3"];
+var audioFiles = ["audio/on.mp3", "audio/off.mp3", "audio/1.mp3", "audio/5.mp3", "audio/21.mp3", "audio/69.mp3", "audio/107.mp3", "audio/420.mp3", "audio/478.mp3", "audio/1000.mp3"];
 
 for (var i = 0; i < audioFiles.length; i++) {
     var audio = new Audio(audioFiles[i]);
@@ -33,6 +33,10 @@ function pictureChange() {
         counterDisplay.innerHTML = counter;
         if (counter === 1) {
             new Audio("audio/1.mp3").play();
+            text.style.color = "#008480";
+        }
+        else if (counter === 5) {
+            new Audio("audio/5.mp3").play();
             text.style.color = "#008480";
         }
         else if (counter === 21) {

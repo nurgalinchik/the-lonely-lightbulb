@@ -1,6 +1,6 @@
 var counter = 0;
 
-var audioFiles = ["audio/on.mp3", "audio/off.mp3", "audio/21.mp3", "audio/69.mp3", "audio/1000.mp3", "audio/420.mp3", "audio/107.mp3"];
+var audioFiles = ["audio/on.mp3", "audio/off.mp3", "audio/1.mp3", "audio/21.mp3", "audio/69.mp3", "audio/107.mp3", "audio/420.mp3", "audio/478.mp3", "audio/1000.mp3"];
 
 for (var i = 0; i < audioFiles.length; i++) {
     var audio = new Audio(audioFiles[i]);
@@ -31,7 +31,11 @@ function pictureChange() {
         text.innerHTML = "<p>the lightbulb is happy!</p>";
         counter++;
         counterDisplay.innerHTML = counter;
-        if (counter === 21) {
+        if (counter === 1) {
+            new Audio("audio/1.mp3").play();
+            text.style.color = "#008480";
+        }
+        else if (counter === 21) {
             new Audio("audio/21.mp3").play();
             text.style.color = "#008480";
         }
@@ -39,16 +43,20 @@ function pictureChange() {
             new Audio("audio/69.mp3").play();
             text.style.color = "#008480";;
         }
-        else if (counter === 1000) {
-            new Audio("audio/1000.mp3").play();
+        else if (counter === 107) {
+            new Audio("audio/107.mp3").play();
             text.style.color = "#008480";;
         }
         else if (counter === 420) {
             new Audio("audio/420.mp3").play();
             text.style.color = "#008480";;
         }
-        else if (counter === 107) {
-            new Audio("audio/107.mp3").play();
+        else if (counter === 478) {
+            new Audio("audio/478.mp3").play();
+            text.style.color = "#008480";;
+        }
+        else if (counter === 1000) {
+            new Audio("audio/1000.mp3").play();
             text.style.color = "#008480";;
         }
         else {
